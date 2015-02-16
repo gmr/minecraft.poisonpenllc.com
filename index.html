@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>minecraft.poisonpenllc.com</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/minecraft.css" rel="stylesheet">
+    <script data-main="js/main" src="js/require.js"></script>
+  </head>
+  <body>
+    <div id="openbar" class="hidden">
+      <a href="#open"><i class="glyphicon glyphicon-chevron-right"></i></a>
+    </div>
+    <div class="hidden-sm" id="sidebar">
+      <a href="#close" class="close" data-dismiss="sidebar" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+      <h4 data-bind="hostname">Minecraft Server Status</h4>
+      <p class="lead text-center">&ldquo;<em data-bind="desc">Loading Status&hellip;</em>&rdquo;</p>
+      <dl class="dl-horizontal">
+        <dt>Port</dt>
+        <dd data-bind="port">...</dd>
+        <dt>Server Online</dt>
+        <dd data-bind="online">...</dd>
+        <dt>Players Online</dt>
+        <dd data-bind="players_online">...</dd>
+        <dt>Max Players</dt>
+        <dd data-bind="players_max">...</dd>
+        <dt>Minecraft Version</dt>
+        <dd data-bind="version">...</dd>
+      </dl>
+      <div class="player-list hidden">
+        <h5>Players Online:</h5>
+        <div data-bind="players">
+          <div class="player"><a href="#marker" data-bind="marker"><img data-bind="skin" src=""></a> <a href="#marker" data-bind="marker"><span data-bind="name"></span></a></div>
+        </div>
+      </div>
+    </div>
+    <div id="overviewer">
+      <iframe src="/overviewer/"></iframe>
+    </div>
+  </body>
+</html>
